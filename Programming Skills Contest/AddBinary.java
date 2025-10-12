@@ -12,6 +12,11 @@ class Solution {
             sb.append(sum % 2);
             carry = sum / 2;      
         }
-        return sb.reverse().toString();
+        String str =sb.reverse().toString();
+        int start = 0;
+        while (start < res.length() - 1 && res.charAt(start) == '0') {
+            start++;
+        }
+        return res.substring(start);
     }
 }
